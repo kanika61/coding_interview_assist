@@ -1,6 +1,6 @@
 # Coding Interview Agent
 
-AI-powered coding interview assistant for practicing data structures and algorithms.
+AI-powered coding interview assistant for practicing data structures and algorithms with Claude's help.
 
 ## Overview
 
