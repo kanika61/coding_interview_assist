@@ -1,0 +1,30 @@
+[
+  {
+    "date": "2026-06-05 19:36",
+    "problem": "Container With Most Water",
+    "intent": "hint",
+    "verdict": "Let's break down the problem step by step. You're given an array of heights and you want to find two lines that will hold the most water.\n\nThink about this: if you have a container with two lines, it can hold more water if those lines are as far apart as possible. In other words, you want to maximize the distance between the two lines.\n\nCan you think of how you might approach finding the two lines that are as far apart as possible?",
+    "language": ""
+  },
+  {
+    "date": "2026-06-05 19:36",
+    "problem": "Container With Most Water",
+    "intent": "hint",
+    "verdict": "Let's break down the problem step by step.\n\n**Approach:** We'll use a two-pointer technique with binary search to find the maximum area of water that can be trapped between two lines.\n\nHere's a high-level outline:\n\n1. Initialize two pointers, `left` and `right`, to the start and end of the array.\n2. Calculate the width of the container (the difference between the current elements at `left` and `right`).\n3. Move the pointer that corresponds to the shorter line towards the other pointer.\n4. Repeat steps 2-3 until `left` meets or crosses `right`.\n5. At each step, calculate the area of water that can be trapped (width \u00d7 height).\n\nWe'll implement this approach in C++ pseudocode:\n```cpp\nint maxArea(int* height, int n) {\n    int left = 0;\n    int right = n - 1;\n    int max_area = 0;\n\n    while (left < right) {\n        // Calculate width and area\n        int width = right - left;\n        int area = width * min(height[left], height[right]);\n\n        // Move pointer that corresponds to shorter line\n        if (height[left] < height[right]) {\n            left++;\n        } else {\n            right--;\n        }\n\n        // Update max_area\n        max_area = max(max_area, area);\n    }\n\n    return max_area;\n}\n```\nHow's that? Do you want me to elaborate or help with implementation details?",
+    "language": ""
+  },
+  {
+    "date": "2026-08-08 13:59",
+    "problem": "Binary Search",
+    "intent": "evaluator",
+    "verdict": "PASS",
+    "language": ""
+  },
+  {
+    "date": "2026-08-08 14:00",
+    "problem": "Binary Search",
+    "intent": "evaluator",
+    "verdict": "FAIL",
+    "language": ""
+  }
+]
